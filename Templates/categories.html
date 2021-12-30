@@ -6,50 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>სათამაშოები</title>
     <link rel="stylesheet" href="../static/css/categoriesstyles.css">
-    <script src="../js/home.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    <div class="container">
-        <nav>
-            <div class="logo">
-                <img src="../Images/5ea2a86505e63bdd814cf868_Logo.png" alt="">
-            </div>
-            <div class="menu-area">
-                <ul>
-                    <li>მთავარი</li>
-                    <li style="background-color: #fff; color: #313131;">სათამაშოები
-                        <ul class="drop-down">
-                            <li>კატეგორია1</li>
-                            <li>კატეგორია2</li>
-                            <li>კატეგორია3</li>
-                            <li>კატეგორია4</li>
-                        </ul>
-                    </li>
-                    <li>კონტაქტი</li>
-                    <li>ჩვენს შესახებ</li>
-                </ul>
-            </div>
-        </nav>
-        <main>
-            <img src="../Images/2cd43b_d1ecd76051de458b9041402093ffeb54_mv2.png" class="move_child">
-        </main>
-        <div id="sidebar">
-                <ul>
-                    <li style="border-radius: 5px 5px 0 0;">კატეგორია 1</li>
-                    <li style="border-radius: 0;">კატეგორია2</li>
-                    <li style="border-radius: 0 0 5px 5px;">კატეგორია3</li>
-                </ul>
+<body>
+    
+        <div class="logo">
+            <img src="../Images/5ea2a86505e63bdd814cf868_Logo.png" alt="">
         </div>
-        <div id="content">
-            <div>სათამაშო 1</div>
-            <div>სათამაშო 2</div>
-            <div>სათამაშო 3</div>
-            <div>სათამაშო 4</div>
-            <div>სათამაშო 5</div>
-            <div>სათამაშო 6</div>
-            <div>სათამაშო 7</div>
-            <div>სათამაშო 8</div>
-            <div>სათამაშო 9</div>
-
+        <div class="menu-area">
+            <ul>
+                <li id="li1"><a href="home.html" style="color: #fff; text-decoration: none;">მთავარი</a></li>
+                <li id="li2" style="background-color: #00fecb; color: #313131;"><a href="" style="color: #fff; text-decoration: none;">სათამაშოები</a>
+                    <ul class="drop-down">
+                        <li style="font-size: 10px;">ფუმფულა სათამაშოები</li>
+                        <li>თოჯინები</li>
+                        <li>ჯარისკაცები</li>
+                        <li>თოფები</li>
+                    </ul>
+                </li>
+                <li id="li3"><a href="contact.html" style="color: #fff; text-decoration: none;">კონტაქტი</a></li>
+                <li id="li4"><a href="about.html" style="color: #fff; text-decoration: none;">ჩვენს შესახებ</a></li>
+            </ul>
         </div>
-        <footer>ყველა უფლება დაცულია</footer>
-    </div>
+        <div class="container1">
+            <div class="icon">
+                <i class="search fa fa-search"></i>
+            </div>
+            <div class="input">
+                <input type="text" placeholder="ძიება" id="search">
+                <i class="clear fa fa-times"></i>
+            </div>
+        </div>
+        <section>
+            <ul>
+                <li class="list active" data-filter="AllToys">ყველა</li>
+                <li class="list" data-filter="fluffyToys">ფუმფულა სათამაშოები</li>
+                <li class="list" data-filter="DollToys">თოჯინები</li>
+                <li class="list" data-filter="SoldierToys">ჯარისკაცები</li>
+                <li class="list" data-filter="GunToys">თოფები</li>
+            </ul>
+            <div class="product">
+                <div class="itemBox GunToys"><img src="../Images/gun-toys-plastic-8-rounds-with-40-barrels-high-grade-mini-toy-original-imafey68xazqrffe.jpeg" alt=""></div>
+                <div class="itemBox SoldierToys"><img src="../Images/71R73dG0HnL.jpg" alt=""></div>
+                <div class="itemBox DollToys"><img src="../Images/images.jpg" alt=""></div>
+                <div class="itemBox SoldierToys"><img src="../Images/51vYjg761zL._AC_SY580_.jpg" alt=""></div>
+                <div class="itemBox GunToys"><img src="../Images/images (1).jpg" alt=""></div>
+                <div class="itemBox fluffyToys"><img src="../Images/living-nature-an455-german-shepherd-1.jpg" alt=""></div>
+                <div class="itemBox GunToys"><img src="../Images/08baf0f30f3eb85caa4eae272e83b2b8.jpg" alt=""></div>
+                <div class="itemBox DollToys"><img src="../Images/10eb2e6b02214523bff133ed129b01ce--toddler-toys-baby-toys.jpg" alt=""></div>
+                <div class="itemBox SoldierToys"><img src="../Images/CHAP-MEI-Army-Action-Figures-Set-Of-10.jpg" alt=""></div>
+                <div class="itemBox DollToys"><img src="../Images/kids-baby-doll-toys-500x500.jpg" alt=""></div>
+                <div class="itemBox fluffyToys"><img src="../Images/CP-LIO-2_ea8f453b-ca32-4d7e-a3f8-7372145b829e.jpg" alt=""></div>
+                <div class="itemBox fluffyToys"><img src="../Images/387-3871801_stuffed-animals-png-transparent-background-soft-toys-png.png" alt=""></div>
+            </div>
+        </section>
+        <script>
+            
+            let search = document.querySelector(".search");
+            let clear = document.querySelector(".clear");
+    
+            search.onclick = function(){
+                document.querySelector(".container1").classList.toggle("active");
+            }
+            clear.onclick = function(){
+                document.getElementById("search").value = "";
+                document.querySelector(".container1").classList.toggle("active");
+            }
+        </script>
+        <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.list').click(function(){
+                    const value = $(this).attr('data-filter');
+                    if (value == 'AllToys'){
+                        $('.itemBox').show('1000');
+                    }
+                    else{
+                        $('.itemBox').not('.'+value).hide('1000');
+                        $('.itemBox').filter('.'+value).show('1000');
+                    }
+                })
+                $('.list').click(function(){
+                    $(this).addClass('active').siblings().removeClass('active');
+                })
+                $('img').click(function(){
+                   var newdiv =document.createElement('div');
+                   newdiv.style.background = "#fff";
+                   newdiv.style.width = "70%";
+                   newdiv.style.height = "70%";
+                   newdiv.style.position = "absolute";
+                   newdiv.style.left = "50%"
+                   newdiv.style.top = "50%"
+                   newdiv.style.transform = "translate(-50%,-50%)";
+                   newdiv.style.zIndex = 1;;
+                   document.getElementsByTagName("body")[0].appendChild(newdiv)
+                    
+                })
+            })
+        </script>
+        
+</body> 

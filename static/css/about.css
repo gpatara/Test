@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 *{
+	padding: 0;
+	margin: 0;
 	box-sizing: border-box;
-	font-family: "Poppins", sans-serif
+	font-family: 'Quicksand', sans-serif;
 }
+
 body{
 	background-color: skyblue;
-    height: 90vh;
+    height: 100vh;
     --webkit-background-size:cover;
     background-size: cover;
     background-position: center center;
@@ -36,6 +41,7 @@ body{
 }
 .menu-area li:hover{
 	background: #00fecb;
+	color: #313131;
 }
 .menu-area > ul{
 	list-style: none;
@@ -56,8 +62,6 @@ body{
 	width: 136px;
 	height: 30px;
 	line-height: 30px;
-
-
 }
 .menu-area > ul > li > a{
 	display: grid;
@@ -117,6 +121,104 @@ body{
 		transform: rotateX(0deg);
 	}
 }
+.about-us{
+    width: 100%;
+}
+.about-us h1{
+    text-align: center;
+    font-size: 40px;
+    color: #00fecb;
+    text-decoration: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 50px;
+    position: relative;
+}
+.about-us h1::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 200px;
+    border-radius: 2px;
+    background-color: #00fecb;
+}
+.wrapper{
+    padding: 0px 60px;
+    margin: 60px auto;
+}
+.content{
+    width: 60%;
+    float: left;
+    text-align: left;
+    padding: 0px 30px;
+}
+.content h3{
+    color: #fff;
+    letter-spacing: 1px;
+}
+.content p{
+    font-family: sans-serif;
+    font-size: 17px;
+    color: #e2e2e2;
+    margin-top: 20px;
+}
+.content .button{
+    margin-top: 40px;
+}
+.content .button a{
+    color: #fff;
+    background-color: #00fecb;
+    border: 1px solid #00fecb;
+    padding: 10px 35px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+.content .button a:hover{
+    background-color: #fff;
+    color: #00fecb;
+    border: none;
+}
+.image-section{
+    float: right;
+    padding: 0px 30px;
+    position: absolute;
+    left: 60%;
+    top: 30%;
+}
+.content .social{
+    margin-top: 30px;
+    margin-left: 15px;
+}
+.content .social a{
+    text-decoration: none;
+    color: #222;
+    font-size: 25px;
+    padding: 0px 7px;
+}
+.content .social a:hover{
+    color: #00fecb;
+    transition: 1s ease;
+}
+.content .social i{
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border: solid 1px #222;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 40px;
+}
+.image-section img{
+    position: relative;
+    left: 12%;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.19);
+}
 .container1{
 	width: 50px;
 	height: 50px;
@@ -170,43 +272,46 @@ body{
 	font-size: 20px;
 	color: #00fecb;
 }
-section{
-	padding: 20px;
-	width: 1280px;
-	margin: 40px auto;
-}
-section ul{
-	display: flex;
-	margin-bottom: 10px;
+@media screen and (max-width: 900px) {
+    .about-us{
+        width: 100%;
+        padding-top: 20px;
+    }
+    .about-us h1{
+        font-size: 32px;
+    }
+    .content{
+        width: 100%;
+        float: none;
+    }
+    .content .button{
+        margin-top: 30px;
+        text-align: center;
+    }
+    .content .button a{
+        padding: 8px 25px;
+    }
+    .content .social{
+        margin-top: 30px;
+        text-align: center;
+    }
+    .content .social a{
+        font-size: 21px;
+    }
+    .image-section{
+        opacity: 0;
+    }
+    .menu-area{
+        display: list-item;
+        position: relative;
+        top: 20%;
 
-}
-section ul li{
-	list-style: none;
-	background: #eee;
-	padding: 8px 20px;
-	margin: 5px;
-	letter-spacing: 1px;
-	cursor: pointer;
-}
-section ul li.active{
-	background: #00fecb;
-	color: #fff;
-}
-.product{
-	display: flex;
-	flex-wrap: wrap;
-}
-.product .itemBox{
-	position: relative;
-	width: 300px;
-	height: 300px;
-	margin: 5px;
-}
-.product .itemBox img{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
+    }
+    .menu-area ul{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+        .menu-area ul li{
+        width: 120px;
+    }
 }

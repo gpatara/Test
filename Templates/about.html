@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ჩვენს შესახებ</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="../static/css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/home.js"></script>
+</head>
+<body >
+    <div class="logo">
+        <img src="../Images/5ea2a86505e63bdd814cf868_Logo.png" alt="">
+    </div>
+    <div class="menu-area">
+        <ul>
+            <li id="li1"><a href="home.html" style="color: #fff; text-decoration: none;">მთავარი</a></li>
+            <li id="li2"><a href="categories.html" style="color: #fff; text-decoration: none;">სათამოშები</a>
+                <ul class="drop-down">
+                    <li style="font-size: 10px;">ფუმფულა სათამაშოები</li>
+                    <li>თოჯინები</li>
+                    <li>ჯარისკაცები</li>
+                    <li>თოფები</li>
+                </ul>
+            </li>
+            <li id="li3"><a href="contact.html" style="color: #fff; text-decoration: none;">კონტაქტი</a></li>
+            <li id="li4" style="background-color: #00fecb;"><a href="about.html" style="color: #fff; text-decoration: none;">ჩვენს შესახებ</a></li>
+        </ul>
+    </div>
+    <div class="container1">
+        <div class="icon">
+            <i class="search fa fa-search"></i>
+        </div>
+        <div class="input">
+            <input type="text" placeholder="ძიება" id="search">
+            <i class="clear fa fa-times"></i>
+        </div>
+    </div>
+    <br><br><br><br>
+    <section>
+        <div class="about-us">
+            <h1>about us</h1>
+            <div class="wrapper">
+                <div class="content">
+                    <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3> 
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including version</p>
+                    <div class="button">
+                        <a href="">Read more</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.facebook.com/?stype=lo&jlou=AfdyBDS-Dgf508AO0r00Hzvr2IKAXyp-Uej6YRtW_-G6vp57kvD9py4opKKIdiEgr3vtrihM3rZ2-aiUGE-BZXwt_nFkXmNMw-JhosVYcFxO_w&smuh=40374&lh=Ac980H0ANmYbKkH6rDE"><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="image-section">
+                    <img src="../Images/depositphotos_99705794-stock-illustration-thin-line-flat-design-banner.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let search = document.querySelector(".search");
+        let clear = document.querySelector(".clear");
+
+        search.onclick = function(){
+            document.querySelector(".container1").classList.toggle("active");
+        }
+        clear.onclick = function(){
+            document.getElementById("search").value = "";
+            document.querySelector(".container1").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>    

@@ -1,21 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="../static/css/home.css">
+	<title>კონტაქტი</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/contactstyles.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
     <script src="../js/home.js"></script>
 </head>
-<body >
+<body>
     <div class="logo">
         <img src="../Images/5ea2a86505e63bdd814cf868_Logo.png" alt="">
     </div>
     <div class="menu-area">
         <ul>
-            <li id="li1" style="background-color: #00fecb;"><a href="home.html" style="color: #fff; text-decoration: none;">მთავარი</a></li>
+            <li id="li1"><a href="home.html" style="color: #fff; text-decoration: none;">მთავარი</a></li>
             <li id="li2"><a href="categories.html" style="color: #fff; text-decoration: none;">სათამაშოები</a>
                 <ul class="drop-down">
                     <li style="font-size: 10px;">ფუმფულა სათამაშოები</li>
@@ -24,9 +23,10 @@
                     <li>თოფები</li>
                 </ul>
             </li>
-            <li id="li3"><a href="contact.html" style="color: #fff; text-decoration: none;">კონტაქტი</a></li>
+            <li id="li3" style="background-color: #00fecb;"><a href="contact.html" style="color: #fff; text-decoration: none;">კონტაქტი</a></li>
             <li id="li4"><a href="about.html" style="color: #fff; text-decoration: none;">ჩვენს შესახებ</a></li>
         </ul>
+        
     </div>
     <div class="container1">
         <div class="icon">
@@ -37,11 +37,21 @@
             <i class="clear fa fa-times"></i>
         </div>
     </div>
-    <div class="welcome-text">
-        <h1>
-        ჩვენ ვართ <span>კომპანია</span></h1>
-        <a href="#">Contact US</a>
-    </div>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left" id="left"></div>
+			<div class="right">
+				<h2>Contact Us</h2>
+				<input type="text" class="field" placeholder="სახელი">
+				<input type="text" class="field" placeholder="მეილი">
+				<input type="text" class="field" placeholder="მობილური">
+				<textarea placeholder="ტექსტი" class="field"></textarea>
+				<button class="btn">Send</button>
+			</div>
+		</div>
+	</div>
+    
+    
     <script>
         let search = document.querySelector(".search");
         let clear = document.querySelector(".clear");
